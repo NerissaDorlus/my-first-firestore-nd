@@ -16,7 +16,7 @@ const restaurant = {
   phone: "(786)677-2903",
 };
 
-// db.collection("restaurants")// creating collection restaurant
+// db.collection("restaurants") // creating collection restaurant
 //   .add(restaurant)
 //   .then((doc) => console.log("Created resaurant", doc.id))
 //   .catch((err) => console.error(err));
