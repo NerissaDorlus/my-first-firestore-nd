@@ -8,6 +8,8 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
+// const restaurantsCol = db.collection('restaurants');
+
 const restaurant = {
   name: "Mister 01",
   address: "555 N Federal Hwy Suite #5, Boca Raton, FL 33432",
@@ -16,10 +18,16 @@ const restaurant = {
   phone: "(786)677-2903",
 };
 
-// db.collection("restaurants") // creating collection restaurant
-//   .add(restaurant)
-//   .then((doc) => console.log("Created resaurant", doc.id))
-//   .catch((err) => console.error(err));
+//add the restaurant object in the firebase
+// db.collection('restaurants').add(restaurant)   // db = adm.firestore => go to firestore admin and create a collection named ''
+// .then( doc => console.log('Created restaurant', doc.id))
+// .catch(err => console.error(err))
+
+//2nd .then method
+restaurantsCol
+  .add(restaurant)
+  .then((doc) => console.log("Created resaurant", doc.id))
+  .catch((err) => console.error(err));
 
 const restaurant2 = {
   name: "Bolay",
